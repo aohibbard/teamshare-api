@@ -1,11 +1,14 @@
 class ObjectivesController < ApplicationController
 
     def index
-
+        objectives = Objective.all
+        render json: ObjectiveSerializer.new(objectives)
     end
 
     def create
-
+        objective = Objective.create(objective_params)
+        objective.save
+        render json: objective
     end
 
     def show
@@ -25,5 +28,5 @@ class ObjectivesController < ApplicationController
     def objective 
 
     end
-    
+
 end
