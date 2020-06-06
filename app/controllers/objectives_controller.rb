@@ -6,7 +6,9 @@ class ObjectivesController < ApplicationController
     end
 
     def create
-
+        objective = Objective.create(objective_params)
+        objective.save
+        render json: objective
     end
 
     def show
