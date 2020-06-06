@@ -1,7 +1,8 @@
 class ObjectivesController < ApplicationController
 
     def index
-
+        objectives = Objective.all
+        render json: ObjectiveSerializer.new(objectives)
     end
 
     def create
@@ -25,5 +26,5 @@ class ObjectivesController < ApplicationController
     def objective 
 
     end
-    
+
 end
