@@ -26,7 +26,7 @@ class ObjectivesController < ApplicationController
     private
 
     def objective 
-
+        params.require(:objective).permit(:title, :status, :notes)
     end
 
 end
