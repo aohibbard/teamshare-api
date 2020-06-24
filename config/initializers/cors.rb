@@ -5,9 +5,11 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
+# Uncomment this chunk below
+# Add origin * to allow for all origins
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'example.com'
+    origins '*'
 
     resource '*',
       headers: :any,
