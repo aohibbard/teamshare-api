@@ -19,7 +19,9 @@ class ObjectivesController < ApplicationController
     def create
         objective = Objective.create(objective_params)
         objective.save
+
         # OR
+        
         # this line of code below? because we need to nest
         objective = goal.objectives.create(objective_params)
         render json: objective
