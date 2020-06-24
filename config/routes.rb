@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :objectives
-  resources :projects
+
+  scope :api do 
+    resources :projects do 
+      resources :objectives
+    end 
+  end
+  # everything should eventually be nested under users, with backend controls for security, yes?
   resources :users
 
   # nest objectives under projects

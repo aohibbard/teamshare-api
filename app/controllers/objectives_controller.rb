@@ -1,7 +1,8 @@
 class ObjectivesController < ApplicationController
 
     def index
-        objectives = Objective.all
+        project_id = params[:project_id].to_i
+        objectives = Objective.where(:project_id => project_id)
         # should objectives be nested under projects?
         # @objectives = @project.objectives.all
         render json: ObjectiveSerializer.new(objectives)
@@ -10,19 +11,23 @@ class ObjectivesController < ApplicationController
     def create
         objective = Objective.create(objective_params)
         objective.save
-        render json: @objective
+        render json: objective
     end
 
     def show
-
+        find_objective
+        render json: ObjectiveSerializer.new(@objective)
     end
 
     def update
-
+        find_objective 
+        @objective.update(objective_params)
+        render json: ObjectiveSerializer.new(@objective)
     end
 
     def destroy
-
+        find_objective
+        objective.destroy
     end
 
     private
@@ -34,7 +39,7 @@ class ObjectivesController < ApplicationController
     
 
     def find_objective
-        objective = Objective.find_by(id: params[:id])
+        @objective = Objective.find_by(id: params[:id])
         # or this? are objectives nested under projects?
         # @objective = @project.objectives.find_by(id: params[:id])
     end

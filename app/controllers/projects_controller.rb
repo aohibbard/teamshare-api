@@ -14,32 +14,31 @@ class ProjectsController < ApplicationController
 
     def show
         find_project
-        render json: ProjectSerializer.new(project)
+        render json: ProjectSerializer.new(@project)
     end 
 
     def update 
         find_project
-        project.update(project_params)
-        project.save
-        render json: TaskSerializer.new(project)
+        @project.update(project_params)
+        @project.save
+        render json: TaskSerializer.new(@project)
     end 
 
     def destroy
         find_project
-        project.destroy
-        render json: project
+        @project.destroy
+        render json: @project
     end 
 
     private 
 
     def find_project
-        project = Project.find_by(id: params[:id])
+        @project = Project.find_by(id: params[:id])
     end
 
     def project
         params.require(:project).permit(:title, :description, :due_date, :status, :notes,
-        user_attributes: [:id]
-        )
+        user_attributes: [:id])
     end
 
 end
