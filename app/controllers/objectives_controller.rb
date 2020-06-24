@@ -5,10 +5,14 @@ class ObjectivesController < ApplicationController
     before_action :find_objective, only: [:show]
 
     def index
+        # are the following two lines of code needed, now that we have a before_action above?
         project_id = params[:project_id].to_i
         objectives = Objective.where(:project_id => project_id)
+
+        # OR
+
         # should objectives be nested under projects?
-        # @objectives = @project.objectives.all
+        @objectives = @project.objectives.all
         render json: ObjectiveSerializer.new(objectives)
     end
 
