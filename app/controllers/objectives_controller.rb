@@ -6,8 +6,8 @@ class ObjectivesController < ApplicationController
 
     def index
         # are the following two lines of code needed, now that we have a before_action above?
-        project_id = params[:project_id].to_i
-        objectives = Objective.where(:project_id => project_id)
+        # project_id = params[:project_id].to_i
+        # objectives = Objective.where(:project_id => project_id)
 
         # OR
 
@@ -17,8 +17,8 @@ class ObjectivesController < ApplicationController
     end
 
     def create
-        objective = Objective.create(objective_params)
-        objective.save
+        # objective = Objective.create(objective_params)
+        # objective.save
 
         # OR
         
