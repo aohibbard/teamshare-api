@@ -1,4 +1,6 @@
 class ObjectivesController < ApplicationController
+    # before any action, our find_objective method will run
+    before_action :find_objective
 
     def index
         project_id = params[:project_id].to_i
@@ -39,9 +41,7 @@ class ObjectivesController < ApplicationController
     
 
     def find_objective
-        @objective = Objective.find_by(id: params[:id])
-        # or this? are objectives nested under projects?
-        # @objective = @project.objectives.find_by(id: params[:id])
+        @objective = @project.objectives.find_by(id: params[:id])
     end
 
 end
