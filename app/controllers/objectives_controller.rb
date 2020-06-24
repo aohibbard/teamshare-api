@@ -32,14 +32,16 @@ class ObjectivesController < ApplicationController
 
     private
 
+    def objective_params 
+        params.require(:objective).permit(:title, :status, :notes)
+    end
+
+    
+
     def find_objective
         @objective = Objective.find_by(id: params[:id])
         # or this? are objectives nested under projects?
         # @objective = @project.objectives.find_by(id: params[:id])
-    end
-
-    def objective_params 
-        params.require(:objective).permit(:title, :status, :notes)
     end
 
 end
