@@ -1,4 +1,4 @@
-# TEAMSHARE README
+# TeamShare Readme
 
 Welcome - so glad you're here! This is the back end of TeamShare. You're welcome to click below for the front end: 
 
@@ -6,7 +6,41 @@ https://github.com/AnnaWijetunga/teamshare-frontend
 
 # TeamShare (front end)
 
-TeamShare is an app built using a Rails API back end. It communicates with the front end, built with React.
+TeamShare is an app built using a Rails API back end and a React front end.
+
+The big news is that this app is currently a *work in progress*. 
+
+Andrew Hibbard and Anna Wijetunga paired up to create an app that would make life easier for folks who need to contribute to the same project.
+
+## Our goal
+
+To have a functioning app the whole way. Build the skateboard, then the car.
+
+## Progress toward our goal
+
+The **back end** of our app currently has:
+- Rails
+- Routes and a scoped route
+- Models and a schema
+- Users, projects and objectives controllers
+- User, project and objective serializers
+- Fast JSON API
+
+The **front end** of our app currently has:
+- React
+
+## What we're working on next
+
+- User authentication with React!
+- A really, really, really engaging readme!
+
+## Dream List
+
+- User authentication (i.e. login)
+- Mailer feature for reminders
+- Redux flow
+- RSPEC (unit testing)
+- React Jest testing
 
 ## Overview
 
