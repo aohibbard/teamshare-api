@@ -78,13 +78,11 @@ Startup the server (within the front end terminal)
 
 ## Usage
 
-Welcome!
-
 More, coming soon.
 
 # Video Walkthrough
 
-This app was created by Andrew Hibbard and Anna Wijetunga. Video walkthrough coming eventually!
+Coming eventually!
 
 ## Contributing
 
