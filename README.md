@@ -1,12 +1,8 @@
 # TEAMSHARE README
 
-Welcome - so glad you're here! This is the front end of TeamShare. You're welcome to click below for the front end: 
+Welcome - so glad you're here! This is the back end of TeamShare. You're welcome to click below for the front end: 
 
 https://github.com/AnnaWijetunga/teamshare-frontend
-
-# Video Walkthrough
-
-This app was created by Andrew Hibbard and Anna Wijetunga. Video walkthrough coming soon!
 
 # TeamShare (front end)
 
@@ -51,6 +47,10 @@ Startup the server (within the front end terminal)
 Welcome!
 
 More, coming soon.
+
+# Video Walkthrough
+
+This app was created by Andrew Hibbard and Anna Wijetunga. Video walkthrough coming eventually!
 
 ## Contributing
 
