@@ -4,13 +4,13 @@ Welcome - so glad you're here! This is the back end of TeamShare. You're welcome
 
 https://github.com/AnnaWijetunga/teamshare-frontend
 
-# TeamShare (front end)
+# TeamShare (back end)
 
 TeamShare is an app built using a Rails API back end and a React front end.
 
 The big news is that this app is currently a *work in progress*. 
 
-Andrew Hibbard and Anna Wijetunga paired up to create an app that would make life easier for folks who need to contribute to the same project.
+Andrew Hibbard and Anna Wijetunga paired up to create an app that would make life easier for folks who need to contribute to the same project. TeamShare is inspired by services such as Asana, Kanban, and Trello, aiming to create a dynamic interface for shared projects.
 
 ## Our goal
 
