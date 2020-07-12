@@ -1,8 +1,9 @@
 class ProjectsController < ApplicationController
 
     def index 
-        projects = Project.all 
-        # this should be limited to an id
+        binding.pry
+        projects = Project.all
+        # should be more like Project.where(user_id: params[:user_id]).all
         render json: ProjectSerializer.new(projects)
     end 
 

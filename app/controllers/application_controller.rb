@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::API
 
     # do not use rails authenticity token
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
 
-    helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!
+    # helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!
 
     def login!
         session[:user_id] = @user.id 
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::API
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end 
 
-    def authorize_user?
+    def authorized_user?
         @user == current_user?
     end 
 

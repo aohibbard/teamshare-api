@@ -3,12 +3,12 @@ class UsersController < ApplicationController
     def create
         user = user.create(user_params)
         user.save
-        render json: TaskSerializer.new(user)
+        render json: UserSerializer.new(user)
     end 
 
     def show
         user = User.find_by(id: params[:id])
-        render json: TaskSerializer.new(user)
+        render json: UserSerializer.new(user)
     end 
 
     private 
