@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-    has_many :projects
-    # maybe should be has and belongs to many
-    has_many :objectives, :through => :projects
+    has_many :user_projects
+    has_many :projects, :through => :user_projects
+    # has_many :objectives, :through => :projects
 
     has_secure_password
 
