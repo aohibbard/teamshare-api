@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+    before_action :logged_in?
+    # before action to verify login?
+
     def create
         user = user.create(user_params)
         user.save

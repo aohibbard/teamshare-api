@@ -12,7 +12,7 @@ class ObjectivesController < ApplicationController
         # OR
 
         # should objectives be nested under projects?
-        @objectives = @project.objectives.all
+        objectives = @project.objectives.all
         render json: ObjectiveSerializer.new(objectives)
     end
 
@@ -50,7 +50,7 @@ class ObjectivesController < ApplicationController
     end
 
     def find_project
-        @project = Project.find_by(id: params[:id])
+        @project = Project.find_by(id: params[:project_id])
     end
 
     def find_objective

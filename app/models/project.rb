@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
-    has_and_belongs_to_many :users
+    belongs_to :user
+    # would suggest only belongs to one user. fix?
     has_many :objectives
 end
