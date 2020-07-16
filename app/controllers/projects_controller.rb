@@ -9,6 +9,9 @@ class ProjectsController < ApplicationController
 
     def create 
         project = Project.create(project_params)
+        # build inner join with current user
+        # find way to pass in current_user
+        # project.user_projects.build(user_id: current_user)
         project.save
         render json: project
     end 
@@ -37,6 +40,7 @@ class ProjectsController < ApplicationController
         @project = Project.find_by(id: params[:id])
     end
 
+    # check attributes
     def project
         params.require(:project).permit(:title, :description, :due_date, :status, :notes,
         user_attributes: [:id])
